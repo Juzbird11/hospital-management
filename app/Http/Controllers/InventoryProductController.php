@@ -12,15 +12,7 @@ class InventoryProductController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
+        return InventoryProduct::get();
     }
 
     /**
@@ -28,7 +20,7 @@ class InventoryProductController extends Controller
      */
     public function show(InventoryProduct $inventoryProduct)
     {
-        //
+        return $inventoryProduct;
     }
 
     /**

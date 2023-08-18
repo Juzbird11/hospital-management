@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\PharmacyProduct;
+use App\Models\UtilityItem;
 use Illuminate\Http\Request;
 
-class PharmacyProductController extends Controller
+class UtilityItemController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +16,9 @@ class PharmacyProductController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Store a newly created resource in storage.
      */
-    public function show(PharmacyProduct $pharmacyProduct)
+    public function store(Request $request)
     {
         //
     }

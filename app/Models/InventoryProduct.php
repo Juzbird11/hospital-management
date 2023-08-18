@@ -11,6 +11,8 @@ class InventoryProduct extends Model
 
     protected $fillable = ['id', 'product_id', 'qty'];
 
+    protected $with = ['product'];
+
     public function product() {
         return $this->belongsTo(Product::class);
     }
