@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\InPatientRoomType;
+use App\Models\OTServiceCharge;
 use Illuminate\Http\Request;
 
-class InPatientRoomTypeController extends Controller
+class OTServiceChargeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -26,7 +26,7 @@ class InPatientRoomTypeController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(InPatientRoomType $inPatientRoomType)
+    public function show(OTServiceCharge $oTServiceCharge)
     {
         //
     }
@@ -34,7 +34,7 @@ class InPatientRoomTypeController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, InPatientRoomType $inPatientRoomType)
+    public function update(Request $request, OTServiceCharge $oTServiceCharge)
     {
         //
     }
@@ -42,7 +42,7 @@ class InPatientRoomTypeController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(InPatientRoomType $inPatientRoomType)
+    public function destroy(OTServiceCharge $oTServiceCharge)
     {
         //
     }

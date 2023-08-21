@@ -5,7 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class InPatientRoomType extends Model
+class ServiceCharge extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['id', 'name', 'type', 'fee'];
 }
