@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\PharmacyProduct;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class PharmacyProductController extends Controller
@@ -12,7 +13,12 @@ class PharmacyProductController extends Controller
      */
     public function index()
     {
-        //
+        return Product::with('pharmacyProduct')->has('pharmacyProduct')->get();
+    }
+
+    public function store(Request $request)
+    {
+        Product::find(1)->pharmacyProduct()->create($request->all());
     }
 
     /**

@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('pharmacy_products', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('product_id')->constrained();
+            $table->unsignedSmallInteger('qty');
             $table->timestamps();
         });
     }

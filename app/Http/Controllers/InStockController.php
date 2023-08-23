@@ -20,7 +20,7 @@ class InStockController extends Controller
      */
     public function show(Model $model)
     {
-        dd($model);
+        return $model;
         return $model::with('product')->where('qty', '>', '0')->get();
     }
 }
