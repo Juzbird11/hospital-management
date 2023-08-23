@@ -11,8 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('stock_transaction', function (Blueprint $table) {
+        Schema::create('stock_transactions', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('frome');
+            $table->unsignedTinyInteger('to');
             $table->timestamps();
         });
     }

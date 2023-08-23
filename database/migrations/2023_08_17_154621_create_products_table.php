@@ -16,6 +16,8 @@ return new class extends Migration
             $table->string('barcode')->unique();
             $table->string('name')->index();
             $table->unsignedSmallInteger('min_qty');
+            $table->unsignedMediumInteger('base_price');
+            $table->unsignedInteger('price');
             $table->timestamps();
         });
     }

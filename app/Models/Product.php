@@ -10,8 +10,7 @@ class Product extends Model
 {
     use HasFactory;
 
-    // protected $fillable = ['id', 'barcode', 'min_qty', 'baseprice', 'price'];
-    protected $fillable = ['name', 'barcode', 'min_qty'];
+    protected $fillable = ['name', 'barcode', 'min_qty', 'baseprice', 'price'];
 
     protected $visible = ['barcode', 'name', 'min_qty', 'inventory_qty'];
 

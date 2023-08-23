@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('utility_items', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('hospital_product_id')->constrained();
+            $table->unsignedSmallInteger('qty');
+            $table->unsignedInteger('price');
             $table->timestamps();
         });
     }
