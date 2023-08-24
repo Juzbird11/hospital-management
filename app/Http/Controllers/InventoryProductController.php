@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\InventoryProduct;
-use App\Models\Product;
 use Illuminate\Http\Request;
 
 class InventoryProductController extends Controller
@@ -13,7 +12,7 @@ class InventoryProductController extends Controller
      */
     public function index()
     {
-        return Product::with('inventoryProduct')->get();
+        echo InventoryProduct::with('product')->get();
     }
 
     public function store(Request $request) {

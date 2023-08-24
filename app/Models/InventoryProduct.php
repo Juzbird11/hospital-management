@@ -2,13 +2,19 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Casts\Attribute;
+use App\Traits\HasProductAttribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class InventoryProduct extends Model
 {
-    use HasFactory;
+    use HasFactory, HasProductAttribute;
 
     protected $fillable = ['product_id', 'qty'];
+
+    protected $hidden = ['product'];
+
+    public function product() {
+        return $this->belongsTo(Product::class);
+    }
 }

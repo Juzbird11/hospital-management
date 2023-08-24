@@ -13,12 +13,12 @@ class PharmacyProductController extends Controller
      */
     public function index()
     {
-        return Product::with('pharmacyProduct')->has('pharmacyProduct')->get();
+        echo PharmacyProduct::with('product')->get();
     }
 
     public function store(Request $request)
     {
-        Product::find(1)->pharmacyProduct()->create($request->all());
+        Product::first()->pharmacyProduct()->create($request->all());
     }
 
     /**

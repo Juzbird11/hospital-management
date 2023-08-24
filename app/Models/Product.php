@@ -10,11 +10,7 @@ class Product extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'barcode', 'min_qty', 'baseprice', 'price'];
-
-    protected $visible = ['barcode', 'name', 'min_qty', 'inventory_qty'];
-
-    protected $appends = ['inventory_qty'];
+    protected $fillable = ['name', 'barcode', 'min_qty', 'base_price', 'price'];
 
     public function inventoryProduct() {
         return $this->hasOne(InventoryProduct::class);
@@ -22,12 +18,5 @@ class Product extends Model
 
     public function pharmacyProduct() {
         return $this->hasOne(PharmacyProduct::class);
-    }
-
-    protected function inventoryQty() : Attribute
-    {
-        return Attribute::make(
-            get: fn() => $this->inventoryProduct->qty,
-        );
     }
 }
