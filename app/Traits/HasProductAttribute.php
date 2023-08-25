@@ -4,9 +4,10 @@ namespace App\Traits;
 
 trait HasProductAttribute 
 {
-    public function initializeProductAttribute()
+    public function initializeHasProductAttribute()
     {
         $this->append(['name', 'barcode', 'base_price', 'price']);
+        $this->setHidden(['product']);
     }
 
     public function getNameAttribute()

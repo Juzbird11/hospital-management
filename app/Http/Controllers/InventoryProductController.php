@@ -12,7 +12,7 @@ class InventoryProductController extends Controller
      */
     public function index()
     {
-        echo InventoryProduct::with('product')->get();
+        echo InventoryProduct::get();
     }
 
     public function store(Request $request) {
@@ -24,7 +24,10 @@ class InventoryProductController extends Controller
      */
     public function show(InventoryProduct $inventoryProduct)
     {
-        return $inventoryProduct;
+        echo $inventoryProduct;
+        // new InventoryProductResource($inventoryProduct);
+
+        // return $inventoryProduct;
     }
 
     /**

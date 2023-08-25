@@ -12,7 +12,7 @@ class InventoryProduct extends Model
 
     protected $fillable = ['product_id', 'qty'];
 
-    protected $hidden = ['product'];
+    protected $with = ['product'];
 
     public function product() {
         return $this->belongsTo(Product::class);
